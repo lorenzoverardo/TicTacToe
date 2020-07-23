@@ -4,24 +4,19 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-    public partial class Home : Form
+    public partial class vsPlayer : Form
     {
         //PLAYER1 X, PLAYER2 O
         bool turn = false; // FALSE = PLAYER1, TRUE = PLAYER2
 
-        public Home()
+        public vsPlayer()
         {
             InitializeComponent();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Made with love by github.com/lorenzoverardo", "About");
-        }
-
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            Environment.Exit(0);
         }
 
         private void panel1_Click(object sender, EventArgs e)
@@ -224,6 +219,7 @@ namespace TicTacToe
 
         private void resetButton_Click(object sender, EventArgs e)
         {
+            turn = false;
             Controls.Clear();
             InitializeComponent();
         }
@@ -294,14 +290,12 @@ namespace TicTacToe
             {
                 turnLabel.ForeColor = Color.Red;
                 turnLabel.Text = "PLAYER 1 WINS";
-                resetButton.Visible = true;
             }
 
             if (oHasWon())
             {
                 turnLabel.ForeColor = Color.FromArgb(0,114,255);
                 turnLabel.Text = "PLAYER 2 WINS";
-                resetButton.Visible = true;
             }
 
             if (!xHasWon() && !oHasWon() && 
@@ -318,17 +312,26 @@ namespace TicTacToe
             {
                 turnLabel.ForeColor = Color.Black;
                 turnLabel.Text = "TIE";
-                resetButton.Visible = true;
             }
         }
 
         private void rulesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Do you really want me to explain you the rules of Tic Tac Toe?\n\n" +
-                "- The game is played on a grid that's 3 squares by 3 squares.\n" +
-                "- You are X, your friend is O. Players take turns putting their marks in empty squares.\n" +
-                "- The first player to get 3 of her marks in a row(up, down, across, or diagonally) is the winner.\n" +
+            MessageBox.Show("- The game is played on a grid that's 3 squares by 3 squares.\n\n" +
+                "- You are X, your friend is O. Players take turns putting their marks in empty squares.\n\n" +
+                "- The first player to get 3 of her marks in a row(up, down, across, or diagonally) is the winner.\n\n" +
                 "- When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.", "Rules");
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Home().Show();
+        }
+
+        private void vsPlayer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

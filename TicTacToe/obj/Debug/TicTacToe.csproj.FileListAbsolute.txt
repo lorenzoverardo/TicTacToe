@@ -8,3 +8,5 @@ D:\Lorenzo\Desktop\Projects\TicTacToe\TicTacToe\bin\Debug\Tic Tac Toe.exe
 D:\Lorenzo\Desktop\Projects\TicTacToe\TicTacToe\bin\Debug\Tic Tac Toe.pdb
 D:\Lorenzo\Desktop\Projects\TicTacToe\TicTacToe\obj\Debug\Tic Tac Toe.exe
 D:\Lorenzo\Desktop\Projects\TicTacToe\TicTacToe\obj\Debug\Tic Tac Toe.pdb
+D:\Lorenzo\Desktop\Projects\TicTacToe\TicTacToe\obj\Debug\TicTacToe.vsPlayer.resources
+D:\Lorenzo\Desktop\Projects\TicTacToe\TicTacToe\obj\Debug\TicTacToe.vsCPU.resources
