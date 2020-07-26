@@ -7,6 +7,7 @@ namespace TicTacToe
     public partial class vsCPU : Form
     {
         //PLAYER1 X, CPU O
+        bool turn = false;
         public vsCPU()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace TicTacToe
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            if (xPictureBox1.Visible || oPictureBox1.Visible) return;
+            if (xPictureBox1.Visible || oPictureBox1.Visible || turn == true) return;
 
             xPictureBox1.Visible = true;
 
@@ -47,7 +48,7 @@ namespace TicTacToe
         }
         private void panel2_Click(object sender, EventArgs e)
         {
-            if (xPictureBox2.Visible || oPictureBox2.Visible) return;
+            if (xPictureBox2.Visible || oPictureBox2.Visible || turn == true) return;
 
             xPictureBox2.Visible = true;
 
@@ -56,7 +57,7 @@ namespace TicTacToe
         }
         private void panel3_Click(object sender, EventArgs e)
         {
-            if (xPictureBox3.Visible || oPictureBox3.Visible) return;
+            if (xPictureBox3.Visible || oPictureBox3.Visible || turn == true) return;
 
             xPictureBox3.Visible = true;
 
@@ -65,7 +66,7 @@ namespace TicTacToe
         }
         private void panel4_Click(object sender, EventArgs e)
         {
-            if (xPictureBox4.Visible || oPictureBox4.Visible) return;
+            if (xPictureBox4.Visible || oPictureBox4.Visible || turn == true) return;
 
             xPictureBox4.Visible = true;
 
@@ -74,7 +75,7 @@ namespace TicTacToe
         }
         private void panel5_Click(object sender, EventArgs e)
         {
-            if (xPictureBox5.Visible || oPictureBox5.Visible) return;
+            if (xPictureBox5.Visible || oPictureBox5.Visible || turn == true) return;
 
             xPictureBox5.Visible = true;
 
@@ -83,7 +84,7 @@ namespace TicTacToe
         }
         private void panel6_Click(object sender, EventArgs e)
         {
-            if (xPictureBox6.Visible || oPictureBox6.Visible) return;
+            if (xPictureBox6.Visible || oPictureBox6.Visible || turn == true) return;
 
             xPictureBox6.Visible = true;
 
@@ -92,7 +93,7 @@ namespace TicTacToe
         }
         private void panel7_Click(object sender, EventArgs e)
         {
-            if (xPictureBox7.Visible || oPictureBox7.Visible) return;
+            if (xPictureBox7.Visible || oPictureBox7.Visible || turn == true) return;
 
             xPictureBox7.Visible = true;
 
@@ -101,7 +102,7 @@ namespace TicTacToe
         }
         private void panel8_Click(object sender, EventArgs e)
         {
-            if (xPictureBox8.Visible || oPictureBox8.Visible) return;
+            if (xPictureBox9.Visible || oPictureBox9.Visible || turn == true) return;
 
             xPictureBox8.Visible = true;
 
@@ -110,8 +111,7 @@ namespace TicTacToe
         }
         private void panel9_Click(object sender, EventArgs e)
         {
-            if (xPictureBox9.Visible || oPictureBox9.Visible) return;
-
+            if (xPictureBox9.Visible || oPictureBox9.Visible || turn == true) return;
             xPictureBox9.Visible = true;
 
             if (!CheckWin())
@@ -120,6 +120,7 @@ namespace TicTacToe
 
         private void MakeAMove()
         {
+            turn = true;
             turnLabel.ForeColor = Color.FromArgb(0, 114, 255);
             turnLabel.Text = "MY TURN";
             System.Timers.Timer timer = new System.Timers.Timer();
@@ -145,8 +146,8 @@ namespace TicTacToe
 
             // https://stackoverflow.com/questions/142003/cross-thread-operation-not-valid-control-accessed-from-a-thread-other-than-the
             Invoke(new Action(() =>
-                {
-                    if (oPictureBox1.Visible && oPictureBox2.Visible && !xPictureBox3.Visible && !oPictureBox3.Visible)
+            {
+                if (oPictureBox1.Visible && oPictureBox2.Visible && !xPictureBox3.Visible && !oPictureBox3.Visible)
                 {
                     oPictureBox3.Visible = true;
                 }
@@ -343,7 +344,8 @@ namespace TicTacToe
                     turnLabel.ForeColor = Color.Red;
                     turnLabel.Text = "YOUR TURN";
                 }
-                }));
+            }));
+            turn = false;
         }
 
         private bool xHasWon()
