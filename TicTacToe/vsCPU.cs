@@ -102,7 +102,7 @@ namespace TicTacToe
         }
         private void panel8_Click(object sender, EventArgs e)
         {
-            if (xPictureBox9.Visible || oPictureBox9.Visible || turn == true) return;
+            if (xPictureBox8.Visible || oPictureBox8.Visible || turn == true) return;
 
             xPictureBox8.Visible = true;
 
@@ -112,6 +112,7 @@ namespace TicTacToe
         private void panel9_Click(object sender, EventArgs e)
         {
             if (xPictureBox9.Visible || oPictureBox9.Visible || turn == true) return;
+
             xPictureBox9.Visible = true;
 
             if (!CheckWin())
