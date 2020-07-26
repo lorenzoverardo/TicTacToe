@@ -5,6 +5,8 @@ namespace TicTacToe
 {
     public partial class Home : Form
     {
+        public Form vsPlayer = new vsPlayer();
+        public Form vsCPU = new vsCPU();
         public Home()
         {
             InitializeComponent();
@@ -28,13 +30,13 @@ namespace TicTacToe
         private void playerVsPlayerPictureBox_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new vsPlayer().Show();
+            vsPlayer.ShowDialog(this);
         }
 
         private void playerVsCpuPictureBox_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new vsCPU().Show();
+            vsCPU.ShowDialog(this);
         }
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)

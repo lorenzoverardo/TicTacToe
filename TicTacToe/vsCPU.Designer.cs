@@ -482,6 +482,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "vsCPU";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tic Tac Toe";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.vsCPU_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.xPictureBox9)).EndInit();

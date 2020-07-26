@@ -483,6 +483,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "vsPlayer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tic Tac Toe";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.vsPlayer_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.boardPictureBox)).EndInit();

@@ -113,6 +113,7 @@
             // 
             // playerVsPlayerPictureBox
             // 
+            this.playerVsPlayerPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playerVsPlayerPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("playerVsPlayerPictureBox.Image")));
             this.playerVsPlayerPictureBox.Location = new System.Drawing.Point(123, 374);
             this.playerVsPlayerPictureBox.Name = "playerVsPlayerPictureBox";
@@ -124,10 +125,11 @@
             // 
             // playerVsCpuPictureBox
             // 
+            this.playerVsCpuPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playerVsCpuPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("playerVsCpuPictureBox.Image")));
-            this.playerVsCpuPictureBox.Location = new System.Drawing.Point(163, 304);
+            this.playerVsCpuPictureBox.Location = new System.Drawing.Point(123, 304);
             this.playerVsCpuPictureBox.Name = "playerVsCpuPictureBox";
-            this.playerVsCpuPictureBox.Size = new System.Drawing.Size(276, 51);
+            this.playerVsCpuPictureBox.Size = new System.Drawing.Size(356, 51);
             this.playerVsCpuPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.playerVsCpuPictureBox.TabIndex = 28;
             this.playerVsCpuPictureBox.TabStop = false;
@@ -159,6 +161,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic Tac Toe";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
             this.menuStrip.ResumeLayout(false);
