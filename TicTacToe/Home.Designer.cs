@@ -54,7 +54,7 @@
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(603, 24);
             this.menuStrip.TabIndex = 24;
-            this.menuStrip.Text = "menuStrip1";
+            this.menuStrip.Text = "Menu";
             // 
             // fileToolStripMenuItem
             // 

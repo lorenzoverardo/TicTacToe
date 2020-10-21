@@ -220,8 +220,35 @@ namespace TicTacToe
         private void resetButton_Click(object sender, EventArgs e)
         {
             turn = false;
-            Controls.Clear();
-            InitializeComponent();
+            xPictureBox1.Visible = false;
+            xPictureBox2.Visible = false;
+            xPictureBox3.Visible = false;
+            xPictureBox4.Visible = false;
+            xPictureBox5.Visible = false;
+            xPictureBox6.Visible = false;
+            xPictureBox7.Visible = false;
+            xPictureBox8.Visible = false;
+            xPictureBox9.Visible = false;
+            oPictureBox1.Visible = false;
+            oPictureBox2.Visible = false;
+            oPictureBox3.Visible = false;
+            oPictureBox4.Visible = false;
+            oPictureBox5.Visible = false;
+            oPictureBox6.Visible = false;
+            oPictureBox7.Visible = false;
+            oPictureBox8.Visible = false;
+            oPictureBox9.Visible = false;
+            panel1.Enabled = true;
+            panel2.Enabled = true;
+            panel3.Enabled = true;
+            panel4.Enabled = true;
+            panel5.Enabled = true;
+            panel6.Enabled = true;
+            panel7.Enabled = true;
+            panel8.Enabled = true;
+            panel9.Enabled = true;
+            turnLabel.ForeColor = Color.Red;
+            turnLabel.Text = "PLAYER 1'S TURN";
         }
 
         private bool xHasWon()
@@ -307,8 +334,7 @@ namespace TicTacToe
                 ((xPictureBox6.Visible) || (oPictureBox6.Visible)) &&
                 ((xPictureBox7.Visible) || (oPictureBox7.Visible)) &&
                 ((xPictureBox8.Visible) || (oPictureBox8.Visible)) &&
-                ((xPictureBox9.Visible) || (oPictureBox9.Visible))
-                )
+                ((xPictureBox9.Visible) || (oPictureBox9.Visible)))
             {
                 turnLabel.ForeColor = Color.Black;
                 turnLabel.Text = "TIE";
@@ -326,7 +352,7 @@ namespace TicTacToe
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Home().Show();
+            Home.HomeForm.Show();
         }
 
         private void vsPlayer_FormClosed(object sender, FormClosedEventArgs e)

@@ -391,7 +391,7 @@
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(603, 24);
             this.menuStrip.TabIndex = 23;
-            this.menuStrip.Text = "menuStrip1";
+            this.menuStrip.Text = "Menu";
             // 
             // fileToolStripMenuItem
             // 
@@ -484,7 +484,7 @@
             this.MaximizeBox = false;
             this.Name = "vsPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Tic Tac Toe";
+            this.Text = "Tic Tac Toe - VS PLAYER";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.vsPlayer_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.boardPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xPictureBox1)).EndInit();

@@ -256,7 +256,7 @@
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(603, 24);
             this.menuStrip.TabIndex = 45;
-            this.menuStrip.Text = "menuStrip1";
+            this.menuStrip.Text = "Menu";
             // 
             // panel3
             // 
@@ -483,7 +483,7 @@
             this.MaximizeBox = false;
             this.Name = "vsCPU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Tic Tac Toe";
+            this.Text = "Tic Tac Toe - VS CPU";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.vsCPU_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.xPictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xPictureBox4)).EndInit();
